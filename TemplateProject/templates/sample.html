@@ -1,0 +1,13 @@
+<h1>{{name|upper}}</h1>
+<h1>{{page_url|urlize}}</h1>
+<h1>BMI:{{bmi|floatformat:2}}</h1>
+<p>給料:{{salary|default:'秘密'}}</p>
+<p>{{fruits|random|lower}}</p>
+<p>{{fruits|join:', '}}</p>
+<p>{{msg|linebreaks}}</p>
+<p>{{msg2|truncatechars:7 }}</p>
+
+{% filter upper %}
+<p>aaa</p>
+<h1>bbb</h1>
+{% endfilter %}
