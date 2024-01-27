@@ -1,0 +1,13 @@
+prefix=/Users/kohei/Desktop/python学習/django/myenv
+exec_prefix=/Users/kohei/Desktop/python学習/django/myenv
+libdir=/Users/kohei/Desktop/python学習/django/myenv/lib
+sharedlibdir=/Users/kohei/Desktop/python学習/django/myenv/lib
+includedir=/Users/kohei/Desktop/python学習/django/myenv/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}

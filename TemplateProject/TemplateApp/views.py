@@ -5,24 +5,36 @@ def index(request):
     val = 'Good Bye'
     return render(request,'index.html',context={'value':val})
 
-def home(request):
-    my_name = 'Taro Yamada'
+def home(request, first_name, last_name):
+    my_name = f'{first_name} {last_name}'
     favorite_fruits=['Apple','Grape','Lemon']
     my_info = {
         'name':'Taro',
         'age':18
     }
+    status = 20
     return render(request,'home.html',context={
         'my_name':my_name,
-        'favorite_fruits':favorite_fruits,
-        'my_info':my_info
+        'fruits':favorite_fruits,
+        'my_info':my_info,
+        'status':status
     })
 def sample1(request):
     return render(request,'sample1.html')
 
 def sample2(request):
     return render(request,'sample2.html')
+class Country:
+    def __init__(self,name,population,capital):
+        self.name = name
+        self.population = population
+        self.capital = capital
 
+def sample3(request):
+    country = Country('Japan',10000000,'Tokyo')
+    return render(request,'sample3.html',context={
+        'country':country
+    })
 def sample(request):
     name = 'ichiro'
     height = 175.5
@@ -46,3 +58,4 @@ def sample(request):
         'msg':msg,
         'msg2':msg2
     })
+    
