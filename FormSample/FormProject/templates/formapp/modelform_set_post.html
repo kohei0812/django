@@ -8,6 +8,10 @@
 
     </head>
     <body>
-       {% include "formapp/form_template2.html" with as_ul=True method='GET' %}
+      <form method="POST">
+        {% csrf_token %}
+        {{ formset.as_p}}
+        <input type="submit" value="送信">
+      </form>
     </body>
 </html>
